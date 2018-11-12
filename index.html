@@ -4,9 +4,101 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/all.css">
+    <title>Grade Point Calculator</title>
 </head>
 <body>
+     <!-- Header (App name) -->
+     <header>
+         <h2>Gradda</h2>
+         <p>"Lets know the next step..."</p>
+     </header>
+
+     <!-- Main container -->
+    <div class="container">
+            
+        <div class="feedback" id="feedback"></div>  <!--Error Feedback -->
+
+        <div class="register-wrapper">
+            <div class="row">
+                <div class="col col-md-5 register-block">
+                  <h3 class="register-title">Result Form</h3>
+                  <p>Fill the form with the course title, unit load and grade respectively. </p>
+                  <form action="">
+                    <label for ="course-title">Course Title:</label>
+                    <input class="block" type="text" placeholder="E.g. Geology or GLY111"/>
+                    <label for ="unit-load">Unit Load:</label>
+                    <input class="block" type="number" placeholder="1 - 6" />
+                    <label for ="unit-load">Grade:</label>
+                    <select class="block" id="grade-list">
+                            <option class="grade-option" selected value="0">A - F</option>              
+                   </select>
+                   <button class="block" id ="submitBtn" type="submit">Submit</button>
+                  </form>
+                </div>
+            </div>
+
+            <div class="result-block hide" id="result">
+                   
+                        <div class="loader hide">
+                            <img src="img\Facebook-1s-200px.gif">
+                        </div>
+                 
+                        <h1 class="gpa">4.9</h1>
+      
+                        <blockquote>
+                            "You have done very well"
+                        </blockquote>
+      
+                        <button id="calcAgn">Calculate Again</button>
+     
+                 </div>
+
+
+                
+
+               
+                
+        </div>
+
+        <div class="list-container my-5">
+            <h2>Result</h2>
+                <div class="list-items">
+                 <!-- single item -->
+                 <div class="item my-3 d-flex justify-content-between p-2">
+                  <h5 class="item-title text-capitalize">item name</h5>
+                  <h5 class="item-title text-capitalize">A</h5>
+                  <h5 class="item-title text-capitalize">3</h5>
+                  <span class="remove-icon text-danger"><i class="fas fa-trash"></i></span>
+                 </div>
+                 <!-- end of single item-->
+                </div>
+           <div class="last-btn">
+          <button class="deleteBtn" id="deleteBtn" type="button">Delete Result</button>
+          <button class="gpBtn" id="gpBtn">Calculate GPA </button>
+          </div>
+        </div>
+
+  
+
+        
+
+    </div>
+
+
+
+
+    <footer id="footer">
+        <div>
+        </div>
+    </footer>
     
+
+
+
+
+    <script src="js/script.js"></script>
 </body>
 </html>
