@@ -10,30 +10,24 @@
     <title>Grade Point Calculator</title>
 </head>
 <body>
-     <!-- Header (App name) -->
-     <header>
-         <h2>Gradda</h2>
-         <p>"Lets know the next step..."</p>
-     </header>
 
      <!-- Main container -->
     <div class="container">
             
-        <div class="feedback" id="feedback"></div>  <!--Error Feedback -->
-
-        <div class="register-wrapper">
+        <div class="register-wrapper mt-5">
             <div class="row">
                 <div class="col col-md-5 register-block">
+                        <div class="feedback-error hide alert"></div>  <!-- Error Feedback  -->
                   <h3 class="register-title">Result Form</h3>
                   <p>Fill the form with the course title, unit load and grade respectively. </p>
-                  <form action="">
+                  <form action="" id="form">
                     <label for ="course-title">Course Title:</label>
-                    <input class="block" type="text" placeholder="E.g. Geology or GLY111"/>
+                    <input class="block" id="course" type="text" placeholder="E.g. Geology or GLY111"/>
                     <label for ="unit-load">Unit Load:</label>
-                    <input class="block" type="number" placeholder="1 - 6" />
+                    <input class="block" type="number" id="unit" placeholder="1 - 6" />
                     <label for ="unit-load">Grade:</label>
-                    <select class="block" id="grade-list">
-                            <option class="grade-option" selected value="0">A - F</option>              
+                    <select class="block" id="grade">
+                            <option class="grade-option" selected value="">A - F</option>              
                    </select>
                    <button class="block" id ="submitBtn" type="submit">Submit</button>
                   </form>
@@ -41,18 +35,21 @@
             </div>
 
             <div class="result-block hide" id="result">
-                   
+                    <div class="feedback-calculating hide alert"></div>
                         <div class="loader hide">
                             <img src="img\Facebook-1s-200px.gif">
                         </div>
-                 
+                     <div class="report hide">
                         <h1 class="gpa">4.9</h1>
       
                         <blockquote>
                             "You have done very well"
                         </blockquote>
-      
+
                         <button id="calcAgn">Calculate Again</button>
+                    </div>
+      
+                        
      
                  </div>
 
@@ -63,21 +60,21 @@
                 
         </div>
 
-        <div class="list-container my-5">
+        <div class="result-container my-5 hide">
             <h2>Result</h2>
-                <div class="list-items">
+                <div class="result-items">
                  <!-- single item -->
-                 <div class="item my-3 d-flex justify-content-between p-2">
+                 <!-- <div class="item my-3 d-flex justify-content-between p-2">
                   <h5 class="item-title text-capitalize">item name</h5>
                   <h5 class="item-title text-capitalize">A</h5>
                   <h5 class="item-title text-capitalize">3</h5>
                   <span class="remove-icon text-danger"><i class="fas fa-trash"></i></span>
-                 </div>
+                 </div> -->
                  <!-- end of single item-->
                 </div>
            <div class="last-btn">
           <button class="deleteBtn" id="deleteBtn" type="button">Delete Result</button>
-          <button class="gpBtn" id="gpBtn">Calculate GPA </button>
+          <button class="gpBtn" id="gpBtn">Calculate GPA</button>
           </div>
         </div>
 
